@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		
+		{% extends 'hello/main.html' %}
+	{% block content %}
+	<div class="container bg-white">
+		<h1>Add Product</h1><hr>
+		<div class="input-group my-4">
+			<form action="" method="POST">
+				{% csrf_token %}
+					<table class="table table-striped">
+				{{form.as_table}}
+			</table><br>
+				<input type="submit" value="Add" class= " btn btn-primary">
+			</form>
+		</div>
+		
+</div>
+
+{% endblock %}
+		
+		<script src="" async defer></script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'hello/main.html' %}
+{% block content %}
+<div class="container bg-white">
+<h1 class="display-3 text-warning"> {{ product.product_name}}</h1>
+<div class="container  mt-5">
+<table class=" table table-striped text-center">
+    <thead  class="bg-dark">
+        <tr class="table-dark">
+            <td>Catogery</td>
+            <td>price</td>
+            <td>Edit</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="h5">{{product.product_category}}</td>
+            <td class="h5">{{product.product_price}}</td>
+            <td><a href="{{product.get_update_url}}" class="btn btn-info" >Update</a></td>
+            <td><a href="{{product.get_delete_url}}" class="btn btn-danger" >Delete</a></td>    
+            
+        </tr>
+    </tbody>
+</table> 
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'hello/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container bg-white p-3">
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <p><b>Hi </b> It is a medical billing software developed by <strong>Stanly</strong>.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close" ></button>
+   
+</div>
+<div class="container">
+    <form method="GET" action="{% url 'product-search' %}">
+    <div class="input-group my-4">
+            <input type="text" name="search" placeholder="Enter Product Name" class="form-control" aria-describedby="button-addon2">
+            <button type="submit" class="btn btn-success " id="button-addon2">Search</button>
+    </div>
+</form>
+
+</div>
+   <div class="container d-block">
+    <img src="{% static 'images/imag1.jpg' %}"   alt="img" class=" img-thumbnail float-start me-3 w-50" ><h1 class="display-4">CubixColor</h1>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ullam ad fuga! Nesciunt consectetur necessitatibus labore autem quam laborum, quis eaque explicabo neque, doloribus et eum, officia reiciendis architecto iure.</p>
+</div>
+</div>
+    <script src="" async defer></script>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'hello/main.html' %}
+{% block content %}
+<div class="container bg-white">
+<div class="alert alert-danger">
+<form action="" method="POST">
+	{% csrf_token %}
+<p>
+	Are you sure want to delete this product?
+</p>
+<button class="btn btn-danger" type="submit">Delete</button>
+<a href="{% url 'HOME' %}" class="btn btn-secondary">Cancel</a>
+<!-- <input type="submit" value="Yes,Delete"> -->
+</form>
+</div>
+</div>
+
+{% endblock %}
